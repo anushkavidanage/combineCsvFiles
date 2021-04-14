@@ -10,6 +10,9 @@ by Anushka Vidanage
 # Import libraries
 import glob
 import pandas
+from libs import auxiliary
+
+MAX_MEMORY_USE = 100000  # In Megabytes
 
 def concat_csv(input_dir, output_file, header_line=True):
   
@@ -51,6 +54,10 @@ def concat_csv(input_dir, output_file, header_line=True):
       df.drop([0], inplace=True)
       
     df_list.append(df)
+  
+  print '   ', auxiliary.get_memory_usage()
+  auxiliary.check_memory_use(MAX_MEMORY_USE)
+  print
   
   print '### Concatenating csv files into one csv'
   print
