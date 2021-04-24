@@ -18,4 +18,4 @@ Running the program:
 
 To run the program, use the following command (with an example setting):
 
-  python combine_csv.py [path to the directory of csv files] [name of the output file.csv]
+  python combine_csv.py /path/to/the/irectory/of/csv/files/ name-of-the-output-file.csv
